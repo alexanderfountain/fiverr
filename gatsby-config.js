@@ -17,12 +17,13 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-loadable-components-ssr`,
     {
-      resolve: 'gatsby-source-storyblok',
+      resolve: "gatsby-source-storyblok",
       options: {
-        accessToken: 'PbQLnTIEPQ1o6GWLsg0imQtt',
-        version: 'published',
-      }
+        accessToken: "PbQLnTIEPQ1o6GWLsg0imQtt",
+        version: "draft",
+      },
     },
     {
       resolve: `gatsby-plugin-manifest`,
@@ -42,4 +43,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};
