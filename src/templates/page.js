@@ -10,13 +10,13 @@ import useStoryblok from "../lib/storyblok";
 const Page = ({ pageContext, location }) => {
   let story = pageContext.story;
   story = useStoryblok(story, location);
-
+  let header = pageContext.header[0];
+  header = useStoryblok(header, location);
   const components = story.content.body.map((blok) => {
     return <DynamicComponent blok={blok} key={blok._uid} />;
   });
-
   return (
-    <Layout>
+    <Layout header={header} location={location}>
       <Seo title="Home" />
       <h1>{story.content.title}</h1>
       {components}

@@ -1,12 +1,10 @@
 import SbEditable from "storyblok-react";
-import Teaser from "./Teaser";
 import Grid from "./grid";
 import Section from "./section";
 import Richtext from "./richtext";
 import React from "react";
 
 const Components = {
-  teaser: Teaser,
   grid: Grid,
   section: Section,
   richtext: Richtext,

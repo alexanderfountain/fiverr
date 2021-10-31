@@ -29,6 +29,11 @@
                   }
                 }
               }
+              header: allStoryblokEntry(filter: {name: {eq: "Layout"}}) {
+                  nodes {
+                    content
+                  }
+                }
             }`
           ).then(result => {
             if (result.errors) {
@@ -37,7 +42,7 @@
             }
     
             const entries = result.data.stories.edges
-            
+            const header = result.data.header.nodes
             // creates a page for each entry with the storyblok slug
             entries.forEach((entry) => {
                 // skip home story
@@ -46,7 +51,8 @@
                         path: `/${entry.node.full_slug}`,
                         component: storyblokEntry,
                         context: {
-                            story: entry.node
+                            story: entry.node,
+                            header: header
                         }
                     }
                     createPage(page)

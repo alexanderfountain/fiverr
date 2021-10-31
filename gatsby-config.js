@@ -18,6 +18,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-loadable-components-ssr`,
+    "gatsby-plugin-theme-ui",
     {
       resolve: "gatsby-source-storyblok",
       options: {

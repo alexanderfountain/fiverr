@@ -4,13 +4,7 @@ import { getFluidGatsbyImage } from "gatsby-storyblok-image";
 import Img from "gatsby-image";
 import DynamicComponent from "../components/dynamicComponent";
 
-function returnSection() {
-  return "Test";
-}
-const ReturnBody = ({ blok }) => {
-  console.log(blok);
-  return <h3>section return body</h3>;
-};
+
 const SectionContainer = ({ blok }) => {
   if (blok.background_image) {
     const fluidProps = getFluidGatsbyImage(blok.background_image, {
